@@ -16,6 +16,7 @@
 		$to = 'alexisveron1993@gmail.com';
 		$subject = 'Presupuesto transporte ';
 
+		$body ="De: $name\n E-Mail: $email\n Mensaje:\n $message tel: $tel \n producto:$prod \n";
 // If there are no errors, send the email
 	if (mail ($to, $subject, $body, $from,$value,$weight,$vol)) {
 		$result='<div class="alert alert-success">Gracias por contactarse! Responderemos a la brevedad </div>';
