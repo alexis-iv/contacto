@@ -2,22 +2,22 @@
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
-    $tel = intval($_POST['tel']);
+    $tel = ($_POST['tel']);
 		$message = $_POST['message'];
-		$prod = intval($_POST['prod']);
-    $value = intval($_POST['weight']);
-    $weight = intval($_POST['weight']);
-    $vol = intval($_POST['vol']);
-    $local1 = intval($_POST['local1']);
-    $prov1 = intval($_POST['prov1']);
-    $local2 = intval($_POST['local2']);
-    $prov2 = intval($_POST['prov2']);
+		$prod = ($_POST['prod']);
+    $value = ($_POST['weight']);
+    $weight = ($_POST['weight']);
+    $vol = ($_POST['vol']);
+    $local1 = ($_POST['local1']);
+    $prov1 = ($_POST['prov1']);
+    $local2 = ($_POST['local2']);
+    $prov2 = ($_POST['prov2']);
 		$from = 'testeando';
 		$to = 'alexisveron1993@gmail.com';
 		$subject = 'Presupuesto transporte ';
 
 		$body ="De: $name\n E-Mail: $email\n Mensaje:\n $message tel: $tel \n Producto:$prod \n Valor:$value \n Peso:$weight \n Volumen:$vol \n Localidad origen: $local1 \n Prov. origen: $prov1 \n Localidas destino: $local2 \n Prov. destino: $prov2 ";
-// If there are no errors, send the email
+
 	if (mail ($to, $subject, $body, $from)) {
 		$result='<div class="alert alert-success">Gracias por contactarse! Responderemos a la brevedad </div>';
 	} else {
